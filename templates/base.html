@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
+        <script src={{ url_for('static', filename='js/script.js') }}></script>
+        
+        
+        <title>{% block title %}{% endblock %} - Escape Game Virtuel</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="content">{% block content %}{% endblock %}</div>
+    <div id="notebook">
+        <div class="left">
+            <div class="bookmark"></div>
+            <div class="panel">{% block left_panel1 %}{% endblock %}</div>
+            <div class="panel">{% block left_panel2 %}{% endblock %}</div>
+        </div>
+        <div class="right">
+            <div class="bookmark">
+                <button onclick="showPanel(0)">Énigme 1</button>
+                <button onclick="showPanel(1)">Énigme 2</button>
+                <div class="rest"></div>
+            </div>
+            <div class="panel">
+                {% block right_panel1 %}{% endblock %}
+            </div>
+            <div class="panel">
+                {% block right_panel2 %}{% endblock %}
+            </div>
+        </div>
+    </div>
+        <div id="footer">
+            <button onclick="toggle_notebook()">Carnet</button>
+            {% block footer %}{% endblock %}
+        </div>
+    </body>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --!>
+    <script>{% block script %}{% endblock %}</script>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Bibliothèque{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <h1>Dans la bibliothèque</h1>
+    <div class="explanation">
+    <p>
+        Il vous faut retrouver la page manquante du livre qui vous a emprisonné. 
+        Celle-ci a été arrachée et déchirée en quatre morceaux, dont chacun a été caché dans un livre de la bibliothèque. Le vieillard vous informe qu'il a retrouvé les livres et vous les montre, mais il n'a pas osé s'aventurer dans leurs mondes car il sent qu'ils sont pleins de dangers. C'est donc à vous de jouer!    
+    </p>
+    </div>
+    <!--<img id="fire" src={{ url_for('static', filename="css/images/dummy_fire.png") }} alt="fire">--!>
+        <a href="{{ url_for('kitsune') }}">Feu</a>
+        <a href="{{ url_for('kappa') }}">Eau</a>
+        <a href="{{ url_for('tokoyo') }}">Terre</a>
+        <a href="{{ url_for('tamamo') }}">Vent</a>
+{% endblock %}
+
